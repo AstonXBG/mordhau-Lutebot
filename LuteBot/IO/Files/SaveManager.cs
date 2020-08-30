@@ -87,9 +87,9 @@ namespace LuteBot.IO.Files
                 if (openFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     fileName = openFileDialog.FileName;
-                    if (!fileName.Contains("DefaultInput.ini"))
+                    if (!fileName.Contains("Input.ini"))
                     {
-                        MessageBox.Show("Please select the file \"DefaultInput.ini\"", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Please select the file \"Input.ini\"", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         fileName = null;
                     }
                 }

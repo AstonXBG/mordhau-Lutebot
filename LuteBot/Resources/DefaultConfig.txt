@@ -70,11 +70,11 @@
     },
     {
       "Item": "OpenConsole",
-      "Value": "Next"
+      "Value": "Home"
     },
     {
       "Item": "MordhauInputIniLocation",
-      "Value": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\Mordhau\\Mordhau\\Config\\DefaultInput.ini"
+      "Value": "%localappdata%\\Mordhau\\Saved\\Config\\WindowsClient\\Input.ini"
     },
     {
       "Item": "UserSavedConsoleKey",

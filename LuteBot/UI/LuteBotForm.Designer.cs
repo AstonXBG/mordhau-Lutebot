@@ -143,7 +143,7 @@ namespace LuteBot
             // 
             this.trackFilteringToolStripMenuItem.Name = "trackFilteringToolStripMenuItem";
             this.trackFilteringToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
-            this.trackFilteringToolStripMenuItem.Text = "Track Filtering";
+            this.trackFilteringToolStripMenuItem.Text = "Track Selection";
             this.trackFilteringToolStripMenuItem.Click += new System.EventHandler(this.TrackFilteringToolStripMenuItem_Click);
             // 
             // liveInputToolStripMenuItem

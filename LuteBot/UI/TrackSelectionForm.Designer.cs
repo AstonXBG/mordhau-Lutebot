@@ -155,6 +155,7 @@ namespace LuteBot.UI
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TrackSelectionForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Track Selection";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TrackSelectionForm_Closing);
             this.ResumeLayout(false);

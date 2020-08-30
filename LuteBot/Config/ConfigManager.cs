@@ -20,7 +20,7 @@ namespace LuteBot.Config
     {
         private static Config configuration;
         private const string autoSavePath = @"Config\";
-		private const string configEndPath = @"Mordhau\Mordhau\Config\DefaultInput.ini";
+		private const string configEndPath = @"\Mordhau\Saved\Config\WindowsClient\Input.ini";
 
 		static ConfigManager()
         {
@@ -43,18 +43,13 @@ namespace LuteBot.Config
 
 				try
 				{
-					string libpath = SteamUtils.findSteamInstallPath() + "\\steamapps\\";
-					List<string> paths = SteamUtils.getSteamAppsPaths(libpath);
+                    string localAppData = Environment.ExpandEnvironmentVariables("%localappdata%");
 
-					foreach(string path in paths)
-					{
-						if (Directory.Exists(path + "Mordhau"))
-						{
-							configuration.Set(PropertyItem.MordhauInputIniLocation, path + configEndPath);
-							break;
-						}
-					}
-				}
+                    if (Directory.Exists(localAppData + @"\Mordhau"))
+                    {
+                        configuration.Set(PropertyItem.MordhauInputIniLocation, localAppData + configEndPath);
+                    }
+                }
 				catch(Exception e)
 				{
 					MessageBox.Show("Error when trying to autodetect the installation path of Mordhau : " + e.Message);

@@ -39,7 +39,7 @@ namespace LuteBot
             {
                 if (string.IsNullOrWhiteSpace(SaveManager.LoadMordhauConfig(ConfigManager.GetProperty(PropertyItem.MordhauInputIniLocation))))
                 {
-                    MordhauConfigLabel.Text = "Mordhau configuration file not found. Please set the location of DefaultInput.ini in the menu above.";
+                    MordhauConfigLabel.Text = "Mordhau configuration file not found. Please set the location of Input.ini in the menu above.";
                 }
                 else
                 {
@@ -121,13 +121,13 @@ namespace LuteBot
         private void AutoConFigButton_Click(object sender, EventArgs e)
         {
             ConfigManager.SetProperty(PropertyItem.UserSavedConsoleKey, ConfigManager.GetProperty(PropertyItem.OpenConsole));
-            ConfigManager.SetProperty(PropertyItem.OpenConsole, "Next");
+            ConfigManager.SetProperty(PropertyItem.OpenConsole, "Home");
             InitPropertiesList();
             string configLocation = ConfigManager.GetProperty(PropertyItem.MordhauInputIniLocation);
             string configContent = SaveManager.LoadMordhauConfig(configLocation);
             if (configContent != null)
             {
-                if (!configContent.Contains("+ConsoleKeys=PageDown"))
+                if (!configContent.Contains("ConsoleKeys=Home"))
                 {
                     int index = -1;
                     int length = -1;
@@ -138,7 +138,7 @@ namespace LuteBot
                     }
                     if (index >= 0 && length > 0)
                     {
-                        configContent = configContent.Insert((index + length), "+ConsoleKeys=PageDown\n");
+                        configContent = configContent.Insert((index + length), "ConsoleKeys=Home\n");
                         SaveManager.SaveMordhauConfig(configLocation, configContent);
                     }
                 }
@@ -154,9 +154,9 @@ namespace LuteBot
             ConfigManager.Refresh();
             string configLocation = ConfigManager.GetProperty(PropertyItem.MordhauInputIniLocation);
             string configContent = SaveManager.LoadMordhauConfig(configLocation);
-            if (configContent.Contains("+ConsoleKeys=PageDown"))
+            if (configContent.Contains("ConsoleKeys=Home"))
             {
-                configContent = configContent.Replace("+ConsoleKeys=PageDown", "");
+                configContent = configContent.Replace("ConsoleKeys=Home", "");
                 SaveManager.SaveMordhauConfig(configLocation, configContent);
             }
             ConfigManager.SetProperty(PropertyItem.OpenConsole, ConfigManager.GetProperty(PropertyItem.UserSavedConsoleKey));
