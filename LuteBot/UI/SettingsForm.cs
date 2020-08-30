@@ -41,7 +41,7 @@ namespace LuteBot
                 latestVersionFetchThread.Start();
                 latestVersionFetchThread.Join(timeout);
 
-                if (!latestVersionFetchThread.IsAlive)
+                if (!latestVersionFetchThread.IsAlive && latestVersion != null)
                 {
                     if (latestVersion.CompareTo(VERSION) <= 0)
                     {

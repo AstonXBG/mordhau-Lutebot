@@ -198,7 +198,8 @@ namespace LuteBot
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SoundBoardForm";
-            this.Text = "SoundBoard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Sound Board";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SoundBoardForm_Closing);
             this.Click += new System.EventHandler(this.SoundBoardForm_Click);
             this.SoundBoardGroupBox.ResumeLayout(false);

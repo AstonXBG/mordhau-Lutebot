@@ -220,7 +220,8 @@ namespace LuteBot.UI
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "LiveInputForm";
-            this.Text = "LiveInputForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Live Input";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.LiveInputForm_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LiveInputForm_KeyDown);
             this.DeviceGroupBox.ResumeLayout(false);

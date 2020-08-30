@@ -61,7 +61,6 @@
     <Compile Include="Core\Midi\MidiPlayer.cs" />
     <Compile Include="Core\MordhauOutDevice.cs" />
     <Compile Include="Core\Player.cs" />
-    <Compile Include="IO\Files\SteamUtils.cs" />
     <Compile Include="IO\KB\Keybinds.cs" />
     <Compile Include="LiveInput\Midi\LiveMidiManager.cs" />
     <Compile Include="LiveInput\Midi\MidiDeviceItem.cs" />
@@ -193,6 +192,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DLL\Sanford.Multimedia.Midi.dll" />
     <Content Include="icon.ico" />
     <None Include="Resources\DefaultConfig.txt" />
   </ItemGroup>

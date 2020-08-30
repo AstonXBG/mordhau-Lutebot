@@ -99,6 +99,7 @@ namespace LuteBot
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PlayListForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Playlist";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PlayListForm_Closing);
             this.ResumeLayout(false);

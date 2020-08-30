@@ -163,7 +163,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "OnlineSyncForm";
-            this.Text = "OnlineSyncForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Online Sync";
             this.ResumeLayout(false);
             this.PerformLayout();
 

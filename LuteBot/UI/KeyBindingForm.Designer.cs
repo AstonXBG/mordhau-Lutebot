@@ -45,8 +45,8 @@ namespace LuteBot
             this.setUpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.revertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mordhauConfigurationFilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.setDefaultInputiniLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openDefaultInputiniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.setInputiniLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openInputiniToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MordhauConfigLabel = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -147,25 +147,25 @@ namespace LuteBot
             // mordhauConfigurationFilesToolStripMenuItem
             // 
             this.mordhauConfigurationFilesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.setDefaultInputiniLocationToolStripMenuItem,
-            this.openDefaultInputiniToolStripMenuItem});
+            this.setInputiniLocationToolStripMenuItem,
+            this.openInputiniToolStripMenuItem});
             this.mordhauConfigurationFilesToolStripMenuItem.Name = "mordhauConfigurationFilesToolStripMenuItem";
             this.mordhauConfigurationFilesToolStripMenuItem.Size = new System.Drawing.Size(226, 22);
             this.mordhauConfigurationFilesToolStripMenuItem.Text = "Mordhau Configuration Files";
             // 
-            // setDefaultInputiniLocationToolStripMenuItem
+            // setInputiniLocationToolStripMenuItem
             // 
-            this.setDefaultInputiniLocationToolStripMenuItem.Name = "setDefaultInputiniLocationToolStripMenuItem";
-            this.setDefaultInputiniLocationToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.setDefaultInputiniLocationToolStripMenuItem.Text = "Set DefaultInput.ini Location";
-            this.setDefaultInputiniLocationToolStripMenuItem.Click += new System.EventHandler(this.SetConfig_Click);
+            this.setInputiniLocationToolStripMenuItem.Name = "setInputiniLocationToolStripMenuItem";
+            this.setInputiniLocationToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.setInputiniLocationToolStripMenuItem.Text = "Set Input.ini Location";
+            this.setInputiniLocationToolStripMenuItem.Click += new System.EventHandler(this.SetConfig_Click);
             // 
-            // openDefaultInputiniToolStripMenuItem
+            // openInputiniToolStripMenuItem
             // 
-            this.openDefaultInputiniToolStripMenuItem.Name = "openDefaultInputiniToolStripMenuItem";
-            this.openDefaultInputiniToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
-            this.openDefaultInputiniToolStripMenuItem.Text = "Open DefaultInput.ini";
-            this.openDefaultInputiniToolStripMenuItem.Click += new System.EventHandler(this.OpenConfig_Click);
+            this.openInputiniToolStripMenuItem.Name = "openInputiniToolStripMenuItem";
+            this.openInputiniToolStripMenuItem.Size = new System.Drawing.Size(224, 22);
+            this.openInputiniToolStripMenuItem.Text = "Open Input.ini";
+            this.openInputiniToolStripMenuItem.Click += new System.EventHandler(this.OpenConfig_Click);
             // 
             // MordhauConfigLabel
             // 
@@ -174,7 +174,7 @@ namespace LuteBot
             this.MordhauConfigLabel.Name = "MordhauConfigLabel";
             this.MordhauConfigLabel.Size = new System.Drawing.Size(470, 13);
             this.MordhauConfigLabel.TabIndex = 8;
-            this.MordhauConfigLabel.Text = "Mordhau configuration file not found. Please set the location of DefaultInput.ini" +
+            this.MordhauConfigLabel.Text = "Mordhau configuration file not found. Please set the location of Input.ini" +
     " in the menu above.";
             // 
             // KeyBindingForm
@@ -194,7 +194,8 @@ namespace LuteBot
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "KeyBindingForm";
-            this.Text = "KeyBinding";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Key Binding";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.KeyHandler);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -216,8 +217,8 @@ namespace LuteBot
         private ToolStripMenuItem setUpToolStripMenuItem;
         private ToolStripMenuItem revertToolStripMenuItem;
         private ToolStripMenuItem mordhauConfigurationFilesToolStripMenuItem;
-        private ToolStripMenuItem setDefaultInputiniLocationToolStripMenuItem;
-        private ToolStripMenuItem openDefaultInputiniToolStripMenuItem;
+        private ToolStripMenuItem setInputiniLocationToolStripMenuItem;
+        private ToolStripMenuItem openInputiniToolStripMenuItem;
         private Label MordhauConfigLabel;
     }
 }
